@@ -1,0 +1,17 @@
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+}
+
+.home {
+    width: 100%;
+
+}
