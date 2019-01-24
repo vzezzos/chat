@@ -1,7 +1,17 @@
+
+
 .example-icon {
-    padding: 0 14px;
-  }
+  font-size: 15px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+}
   
-  .example-spacer {
-    flex: 1 1 auto;
-  }
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-size: 1em;
+}
