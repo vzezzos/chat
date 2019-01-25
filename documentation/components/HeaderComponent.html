@@ -133,6 +133,9 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
+                            <li>
+                                <a href="#signIn">signIn</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -151,15 +154,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/header/header.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/header/header.component.ts:9</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -195,7 +228,45 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/header/header.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/header/header.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="signIn"></a>
+                        <span class="name">
+                            <b>
+                            signIn
+                            </b>
+                            <a href="#signIn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>signIn()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/header/header.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -219,6 +290,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
 
 @Component({
   selector: &#x27;app-header&#x27;,
@@ -227,9 +299,13 @@
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  signIn() {
+    this.router.navigate([&#x27;/login&#x27;]);
   }
 
 }
@@ -237,9 +313,15 @@ export class HeaderComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  header works!
-&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">
+&lt;mat-toolbar&gt;
+    &lt;span class&#x3D;&quot;example-spacer&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;title&quot;&gt;&lt;b&gt;Chat&lt;/b&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;example-spacer&quot;&gt;&lt;/span&gt;
+    &lt;mat-icon class&#x3D;&quot;example-icon signin&quot; (click)&#x3D;&quot;signIn()&quot;&gt;account_circle&lt;/mat-icon&gt;
+    &lt;mat-icon class&#x3D;&quot;example-icon add-user&quot; (click)&#x3D;&quot;addUser()&quot;&gt;person_add&lt;/mat-icon&gt;
+    &lt;!--mat-icon class&#x3D;&quot;example-icon&quot;&gt;delete&lt;/mat-icon--&gt;
+&lt;/mat-toolbar&gt;
 </code></pre>
     </div>
 
@@ -247,7 +329,28 @@ export class HeaderComponent implements OnInit {
                 <p class="comment">
                     <code>./header.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">mat-toolbar {
+  background: rgb(32, 32, 32) !important;
+  color: aliceblue;
+
+}
+
+.example-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  cursor: pointer;
+}
+  
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-size: 1em;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -275,8 +378,8 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  header works!</p></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomePageComponent', 'selector': 'app-home-page'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar>    <span class="example-spacer"></span>    <span class="title"><b>Chat</b></span>    <span class="example-spacer"></span>    <mat-icon class="example-icon signin" (click)="signIn()">account_circle</mat-icon>    <mat-icon class="example-icon add-user" (click)="addUser()">person_add</mat-icon>    <!--mat-icon class="example-icon">delete</mat-icon--></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'LoginComponent', 'selector': 'app-login'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
 </script>
