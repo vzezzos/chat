@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
@@ -7,17 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  fakeLinks: string[]= [];
+  fakeLinksAbout: string[]= [];
+  fakeLinksChat: string[]= [];
+  fakeLinksHelp: string[]= [];
+  newsLetterForm: FormControl;
 
   constructor() { 
-    this.fakeLinks = [
-      "Settings",
-      "About chat",
-      "Informations",
-      "Contacts Us",
-      "About Us",
-      'Recrutment',
+    this.fakeLinksAbout = [
+      'Generals rules',
+      'Terms of use',
+      'Personnal data',
+      'Legal notice',
+      'Report abuse',
+      'Cookies'
     ];
+    this.fakeLinksChat = [
+      'Who are we?',
+      'Recrutement',
+      'Contact us'
+    ];
+    this.fakeLinksHelp = [
+      'Settings',
+      'Need Help?',
+      'Plus d\'idées'
+    ];
+    this.newsLetterForm = new FormControl('');
   }
 
   ngOnInit() {

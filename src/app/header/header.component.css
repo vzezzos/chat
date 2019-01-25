@@ -1,7 +1,10 @@
+mat-toolbar {
+  background: rgb(32, 32, 32) !important;
+  color: aliceblue;
 
+}
 
 .example-icon {
-  font-size: 15px !important;
   display: flex;
   align-items: center;
   justify-content: center;
