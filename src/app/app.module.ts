@@ -4,21 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './modules/material.module';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './authentification/login/login.component';
-import { AuthentificationService } from './providers/authentification.service';
+import { AuthentificationModule } from './authentification/authentification.module';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app.routes';
+import { FormModule } from './modules/form.module';
 
-
-const appRoutes: Routes = [
-  { path: 'home', component: HomePageComponent},
-  { path: 'login', component: LoginComponent},
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'}
-];
 
 @NgModule({
   declarations: [
@@ -26,17 +18,16 @@ const appRoutes: Routes = [
     HomePageComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+
   ],
   imports: [
     BrowserModule,
     MaterialModule,
-    ReactiveFormsModule,
-    FormsModule,
     RouterModule.forRoot(appRoutes),
+    AuthentificationModule,
+    FormModule
   ],
   providers: [
-    AuthentificationService,
   ],
   bootstrap: [AppComponent]
 })
