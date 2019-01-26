@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { AuthentificationService } from '../providers/authentification.service';
 import { AddUserComponent } from './add-user/add-user.component';
-import { MaterialModule } from '../modules/material.module';
-import { FormModule } from '../modules/form.module';
+import { MaterialModule } from '../modules-shared/material.module';
+import { FormModule } from '../modules-shared/form.module';
 
 @NgModule({
   imports: [

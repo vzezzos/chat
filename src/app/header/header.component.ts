@@ -18,6 +18,6 @@ export class HeaderComponent implements OnInit {
   }
   
   addUser() {
-    this.router.navigate(['']);
+    this.router.navigate(['/add-user']);
   }
 }

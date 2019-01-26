@@ -11,5 +11,6 @@ export const appRoutes: Routes = [
     { path: 'add-user', component: AddUserComponent},
     { path: '',
       redirectTo: '/home',
-      pathMatch: 'full'}
+      pathMatch: 'full'
+    }
   ];
