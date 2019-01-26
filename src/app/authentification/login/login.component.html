@@ -1,20 +1,29 @@
 
 <div class="container">
+
     <div class="body">
       <mat-card>
         <form [formGroup]="loginForm">
           <div class="form-user">
+            
             <mat-form-field class="input-user">
               <input type="text" matInput placeholder="Username" [formControl]="username" />
                 <mat-error *ngIf="username.invalid">8 caractères requis</mat-error>
               </mat-form-field>
+
               <mat-form-field class="input-user">
                 <input type="password" matInput placeholder="Password" [formControl]="mdp" />
               </mat-form-field>
+
+              <mat-checkbox color="primary" class="checkbox">
+                Remember me?
+              </mat-checkbox>
               <button mat-raised-button class="button" (click)="checkIfCorrect()" [disabled]="loginForm.invalid"> 
                 Connection
               </button>
+              <mat-hint>Forgotten password?</mat-hint>
             </div>
+
             <div>
               <p *ngIf="flagCo"> Username ou mot de passe incorrect </p>
             </div>

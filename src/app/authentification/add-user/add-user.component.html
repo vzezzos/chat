@@ -1,3 +1,50 @@
-<p>
-  add-user works!
-</p>
+
+<div class="container">
+
+    <div class="body">
+
+      <mat-card>
+
+        <mat-card-header>
+          <mat-card-title>
+           My details
+          </mat-card-title>
+        </mat-card-header>
+
+        <div class="form-container">        
+          <form [formGroup]="addUserForm" class="form-user">
+            <mat-form-field class="input-user">
+              <input type="text" matInput placeholder="Username" [formControl]="username" />
+              <!--mat-error *ngIf="username.invalid">8 caractères requis</mat-error-->
+            </mat-form-field>
+
+            <mat-form-field class="input-user">
+              <input type="email" matInput placeholder="E-mail" [formControl]="eMail" />
+            </mat-form-field>
+
+            <mat-form-field class="input-user">
+              <input type="text" matInput placeholder="Password" [formControl]="password" />
+              <mat-hint>
+                <span>Your password must contain at least 8 caracters, including numbers and special caracters</span>
+              </mat-hint>
+            </mat-form-field>
+            
+
+            <mat-form-field class="input-user">
+              <input type="password" matInput placeholder="Confirm your password" [formControl]="confirmPassword" />
+            </mat-form-field>
+
+            <mat-checkbox class="checkbox" color="primary">
+                Proin interdum convallis eros in porttitor. Fusce ultrices varius tempor. 
+            </mat-checkbox>
+
+            <button mat-raised-button class="button" (click)="checkIfCorrect()" [disabled]="addUserForm.invalid" class="button"> 
+              Connection
+            </button>
+            
+          </form>
+        </div>
+      </mat-card>
+    </div>
+
+</div>

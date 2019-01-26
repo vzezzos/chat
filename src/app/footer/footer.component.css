@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    height: 100%;
+    min-height: 35vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,7 +47,7 @@
 
 .line-between {
     width: 1px;
-    height: 80%;
+    min-height: 80%;
     background-color: grey;
 }
 
