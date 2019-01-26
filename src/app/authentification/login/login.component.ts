@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthentificationService } from '../../providers/authentification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   flagUser: boolean;
   flagCo: boolean;
 
-  constructor(private authentification: AuthentificationService) { }
+  constructor(private authentification: AuthentificationService, private router: Router) { }
 
   ngOnInit() {
     this.username = new FormControl('coucoutoi', [
@@ -32,6 +33,20 @@ export class LoginComponent implements OnInit {
     });
     this.flagUser = false;
     this.flagCo = false;
+  }
+
+  checkIfCorrect() {
+    this.flagUser = !!this.authentification.findUser(this.username, this.mdp);
+    
+    if (this.flagUser) {
+      //this.authentification.updateUser(this.flagUser);
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 0);
+    }
+    else {
+      this.flagCo = true;
+    }
   }
 
 }
