@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthentificationService } from '../../providers/authentification.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  _userToLog: any;
+  @Input()
+  set userToLog(user: any) {
+    this._userToLog = user;
+    console.log('DANS LE SETTER', user);
+    if (this.username && this.mdp) {
+      this.username.setValue(this._userToLog.username);
+      this.mdp.setValue(this._userToLog.password);
+    }
+  }
+  get userToLog(): any {
+    return this._userToLog;
+  }
 
   username: FormControl;
   mdp: FormControl;
@@ -19,11 +34,11 @@ export class LoginComponent implements OnInit {
   constructor(private authentification: AuthentificationService, private router: Router) { }
 
   ngOnInit() {
-    this.username = new FormControl('coucoutoi', [
+    this.username = new FormControl('', [
       Validators.required,
       Validators.minLength(4),
     ]);
-    this.mdp = new FormControl('coucoutoi', [
+    this.mdp = new FormControl('', [
       Validators.required,
       Validators.minLength(8),
     ]);

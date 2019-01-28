@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/user';
+import { User, key } from '../models/user';
 import * as Crypto from 'crypto-js';
 import { FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { map, catchError } from 'rxjs/operators';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+
+
 //import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
@@ -16,13 +21,13 @@ export class AuthentificationService {
   //flagUser$: Observable<boolean>;
   user: User;
 
-  constructor() {
-    this.userLst = [
+  constructor(private http: HttpClient) {
+    this.userLst = [/*
       new User('123456789', '87654321', true),
       new User('coucoutoi', 'coucoutoi', true),
       new User('coucoutoi1', 'coucoutoi1', false),
       new User('coucoutoi2', 'coucoutoi2', false),
-      new User('coucoutoi3', 'coucoutoi3', false),
+      new User('coucoutoi3', 'coucoutoi3', false),*/
     ];
 
     /*
@@ -69,12 +74,18 @@ export class AuthentificationService {
   }
 
   addUser(user: User) {
-    this.userLst.push(user);
+    return this.http.post('http://localhost:3000/users', user).pipe(
+      map((user: any) => {
+        const userCpy = {...user, id: user._id};
+        delete userCpy._id;
+        return userCpy;
+      })
+    );
   }
  
   findUser(userName: FormControl, userMdp: FormControl): User{
     this.user =  this.userLst.find((user: User) => {
-      const decryptMdp = Crypto.AES.decrypt(user.mdp, user.key).toString(Crypto.enc.Utf8);
+      const decryptMdp = Crypto.AES.decrypt(user.mdp, key).toString(Crypto.enc.Utf8);
       return user.login === userName.value && decryptMdp === userMdp.value;
     });
     //localStorage.setItem('User', JSON.stringify({...this.user, mdp: undefined}));

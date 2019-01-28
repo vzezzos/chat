@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>MaterialModule</li>
+    <li>FormModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/modules-shared/material.module.ts</code>
+            <code>src/app/modules-shared/form.module.ts</code>
         </p>
 
 
@@ -72,111 +72,22 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-import { BrowserAnimationsModule } from &#x27;@angular/platform-browser/animations&#x27;;
-
-import { MatCheckboxModule } from &#x27;@angular/material/checkbox&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
-import { MatInputModule } from &#x27;@angular/material/input&#x27;;
-import { MatAutocompleteModule } from &#x27;@angular/material/autocomplete&#x27;;
-import { MatDatepickerModule } from &#x27;@angular/material/datepicker&#x27;;
-import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
-import { MatRadioModule } from &#x27;@angular/material/radio&#x27;;
-import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
-import { MatSliderModule } from &#x27;@angular/material/slider&#x27;;
-import { MatSlideToggleModule } from &#x27;@angular/material/slide-toggle&#x27;;
-import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
-import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
-import { MatToolbarModule } from &#x27;@angular/material/toolbar&#x27;;
-import { MatListModule } from &#x27;@angular/material/list&#x27;;
-import { MatGridListModule } from &#x27;@angular/material/grid-list&#x27;;
-import { MatCardModule } from &#x27;@angular/material/card&#x27;;
-import { MatStepperModule } from &#x27;@angular/material/stepper&#x27;;
-import { MatTabsModule } from &#x27;@angular/material/tabs&#x27;;
-import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;;
-import { MatButtonToggleModule } from &#x27;@angular/material/button-toggle&#x27;;
-import { MatChipsModule } from &#x27;@angular/material/chips&#x27;;
-import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
-import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
-import { MatProgressBarModule } from &#x27;@angular/material/progress-bar&#x27;;
-import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
-import { MatTooltipModule } from &#x27;@angular/material/tooltip&#x27;;
-import { MatSnackBarModule } from &#x27;@angular/material/snack-bar&#x27;;
-import { MatTableModule } from &#x27;@angular/material/table&#x27;;
-import { MatSortModule } from &#x27;@angular/material/sort&#x27;;
-import { MatPaginatorModule } from &#x27;@angular/material/paginator&#x27;;
+import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
 
 
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
-    MatCheckboxModule,
-    MatButtonModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatStepperModule,
-    MatTabsModule,
-    MatExpansionModule,
-    MatButtonToggleModule,
-    MatChipsModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    MatDialogModule,
-    MatTooltipModule,
-    MatSnackBarModule,
-    MatTableModule,
-    MatSortModule,
-    MatPaginatorModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   declarations: [],
   exports: [
-    BrowserAnimationsModule,
-    MatCheckboxModule,
-    MatButtonModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatStepperModule,
-    MatTabsModule,
-    MatExpansionModule,
-    MatButtonToggleModule,
-    MatChipsModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    MatDialogModule,
-    MatTooltipModule,
-    MatSnackBarModule,
-    MatTableModule,
-    MatSortModule,
-    MatPaginatorModule,
-  ],
+    ReactiveFormsModule,
+    FormsModule
+  ]
 })
-export class MaterialModule { }
+export class FormModule { }
 </code></pre>
     </div>
 </div>
@@ -211,7 +122,7 @@ export class MaterialModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'MaterialModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'FormModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

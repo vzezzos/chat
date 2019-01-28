@@ -1,20 +1,17 @@
 import * as Crypto from 'crypto-js';
 
+export const key: string = 'Monmotde!!Passssssserapas';
+
 export class User {
 
-    static idRef: number = 0;
-    login: string;
-    mdp: any;
-    list: User[]= [];
-    key: string = 'Monmotde!!Passssssserapas';
-    id: number;
-    admin: boolean;
+    constructor(
+        public login: string,
+        public admin: boolean,
+        public id: string,
+        public mdp: string
 
-    constructor(loginRef: string, mdpRef: string, adminRef: boolean) {
-        this.login = loginRef;
-        this.mdp = Crypto.AES.encrypt(mdpRef, this.key);
-        this.id = User.idRef++;
-        this.admin = adminRef;
+    ) {
+        //this.mdp = Crypto.AES.encrypt(mdpRef, key);
     }
 /*
     addLog(logsList: User[]) {

@@ -19,7 +19,7 @@
             </mat-form-field>
 
             <mat-form-field class="input-user">
-              <input type="email" matInput placeholder="E-mail" [formControl]="eMail" />
+              <input type="email" matInput placeholder="E-mail" [formControl]="email" />
             </mat-form-field>
 
             <mat-form-field class="input-user">
@@ -38,8 +38,8 @@
                 Proin interdum convallis eros in porttitor. Fusce ultrices varius tempor. 
             </mat-checkbox>
 
-            <button mat-raised-button class="button" (click)="checkIfCorrect()" [disabled]="addUserForm.invalid" class="button"> 
-              Connection
+            <button mat-raised-button class="button" (click)="submitUser()" [disabled]="addUserForm.invalid" class="button"> 
+              Submit
             </button>
             
           </form>

@@ -1,6 +1,6 @@
 <div class="container">
-  <mat-tab-group dynamicHeight mat-stretch-tabs class="tab">
-    <mat-tab label="Signin"> <app-login></app-login> </mat-tab>
-    <mat-tab label="Create an account"> <app-add-user></app-add-user> </mat-tab>
+  <mat-tab-group dynamicHeight mat-stretch-tabs (selectedIndexChange)="selectIndex($event)" [selectedIndex]="selectTab" class="tab">
+    <mat-tab label="Signin"> <app-login [userToLog]="userToLog"></app-login> </mat-tab>
+    <mat-tab label="Create an account"> <app-add-user (createdUserEvent)="createdUser($event)"></app-add-user> </mat-tab>
   </mat-tab-group>
 </div>

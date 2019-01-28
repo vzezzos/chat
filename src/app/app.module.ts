@@ -10,6 +10,7 @@ import { AuthentificationModule } from './authentification/authentification.modu
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { FormModule } from './modules-shared/form.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormModule } from './modules-shared/form.module';
     MaterialModule,
     RouterModule.forRoot(appRoutes),
     AuthentificationModule,
-    FormModule
+    FormModule,
+    HttpClientModule
   ],
   providers: [
   ],
