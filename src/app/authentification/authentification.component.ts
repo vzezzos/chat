@@ -8,7 +8,7 @@ import { User } from '../models/user';
 })
 export class AuthentificationComponent implements OnInit {
 
-  userToLog: any;
+  userToLog: User;
   selectTab: number = 0;
 
   constructor() { }
@@ -16,12 +16,12 @@ export class AuthentificationComponent implements OnInit {
   ngOnInit() {
   }
 
-  createdUser(user: any) {
+  createdUser(user: User) {
     this.userToLog = user;
     this.selectTab = 0;
   }
 
-  selectIndex(toto) {
-    this.selectTab = toto;
+  selectIndex(index) {
+    this.selectTab = index;
   }
 }
