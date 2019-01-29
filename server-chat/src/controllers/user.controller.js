@@ -26,12 +26,11 @@ module.exports.create = (req, res, db) => {
     };
     User.create(user, (err, result) => {
       if (err) {
-        console.log("can't create user: ", user, err);
         res.status(400).send({ error: "Cannot create user" });
       } else {
         User.find({ _id: result._id}).exec((err, resultExec) => {
           if (err) {
-            res.send({ error: "An error has occurred" });
+            res.status(400).send({ error: "An error has occurred" });
           } else {
             console.log(resultExec[0]);
             res.json(resultExec[0]);
@@ -75,20 +74,24 @@ module.exports.authentify = (req, res, db) => {
   .exec((err, result) => {
     console.log(result);
     if (err || result[0] === undefined) {
-      res.send({ error: "An error has occurred dans le username" });
+      res.status(400).send({ error: "An error has occurred dans le username" });
     } else {
       bcrypt.compare(req.body.password, result[0].password, function(err, match) {
-        if (err)
-        {
-          res.send({ error: "An error has occured with bcrypt"});
+        if (err) {
+          res.status(400).send({ error: "An error has occured with bcrypt"});
           return;
         }
-        if (match)
-        {
-          console.log("tout s'est bien passé dans le hash du password", result[0]);
-          res.json({user: result[0], token: auth.createJWToken(result[0])});
+        if (match) {
+          User.find({_id: result[0]._id}).exec((err, resultExec) => {
+            if (err) {
+              res.status(400).send({ error: "Cannot find user"});
+              return;
+            }
+            console.log("tout s'est bien passé dans le hash du password!!!", resultExec[0]);
+            res.json({user: resultExec[0], token: auth.createJWToken(resultExec[0])});
+          })
         } else {
-          res.send({ error: "password incorrect" });
+          res.status(400).send({ error: "password incorrect" });
         }
       });
     }

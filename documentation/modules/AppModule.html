@@ -279,6 +279,7 @@ import { AuthentificationModule } from &#x27;./authentification/authentification
 import { RouterModule } from &#x27;@angular/router&#x27;;
 import { appRoutes } from &#x27;./app.routes&#x27;;
 import { FormModule } from &#x27;./modules-shared/form.module&#x27;;
+import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
 
 
 @NgModule({
@@ -294,7 +295,8 @@ import { FormModule } from &#x27;./modules-shared/form.module&#x27;;
     MaterialModule,
     RouterModule.forRoot(appRoutes),
     AuthentificationModule,
-    FormModule
+    FormModule,
+    HttpClientModule
   ],
   providers: [
   ],

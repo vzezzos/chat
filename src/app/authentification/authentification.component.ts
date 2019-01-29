@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
+import { AuthentificationService } from '../providers/authentification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-authentification',
@@ -11,17 +13,31 @@ export class AuthentificationComponent implements OnInit {
   userToLog: User;
   selectTab: number = 0;
 
-  constructor() { }
+  constructor(private authentification: AuthentificationService, private router: Router) { }
 
   ngOnInit() {
   }
 
   createdUser(user: User) {
-    this.userToLog = user;
-    this.selectTab = 0;
+    this.authentification.addUser(user).subscribe((userResponse: User) => {
+      console.log('User crée', userResponse);
+      this.userToLog = user;
+      this.selectTab = 0;
+    }, (err: Error) => {
+      console.log(err);
+    });
   }
 
   selectIndex(index) {
     this.selectTab = index;
+  }
+
+  signIn(user: User) {
+    this.authentification.signIn(user).subscribe((result: { user: User, token: string }) => {
+      alert('login confirmé');
+      this.router.navigate(['/']);
+    }, (err: Error) => {
+      console.log(err);
+    });
   }
 }

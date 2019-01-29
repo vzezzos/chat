@@ -1,7 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthentificationService } from '../../providers/authentification.service';
-import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 
 @Component({
@@ -25,6 +23,9 @@ export class LoginComponent implements OnInit {
     return this._userToLog;
   }
 
+  @Output()
+  signInEvent: EventEmitter<User> = new EventEmitter<User>();
+
   username: FormControl;
   password: FormControl;
   loginForm: FormGroup;
@@ -32,7 +33,7 @@ export class LoginComponent implements OnInit {
   flagCo: boolean;
   passwordHidden: boolean = true;
 
-  constructor(private authentification: AuthentificationService, private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
     this.username = new FormControl('', [
@@ -53,5 +54,9 @@ export class LoginComponent implements OnInit {
 
   changeVisibiltyPassword() {
     this.passwordHidden = !this.passwordHidden;
+  }
+
+  signIn() {
+    this.signInEvent.emit({username: this.username.value, password: this.password.value});
   }
 }

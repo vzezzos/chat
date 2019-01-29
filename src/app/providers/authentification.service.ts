@@ -15,6 +15,7 @@ export class AuthentificationService {
   flagAdmin: boolean;
   flagUser: boolean;
   user: User;
+  token: string;
 
   constructor(private http: HttpClient) {
     this.flagUser = false;
@@ -38,5 +39,15 @@ export class AuthentificationService {
       })
     );
   }
-
+ 
+  signIn(user: User) {
+    type LoginResult = { user: User, token: string };
+    return this.http.post<LoginResult>('http://localhost:3000/users/login', user).pipe(
+      map((result: LoginResult) => {
+        this.user = result.user;
+        this.token = result.token;
+        return result;
+      })
+    );
+  }
 }

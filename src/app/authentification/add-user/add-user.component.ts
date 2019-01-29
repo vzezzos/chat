@@ -1,6 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthentificationService } from 'src/app/providers/authentification.service';
 import { User } from 'src/app/models/user';
 import { EventEmitter } from '@angular/core';
 
@@ -12,7 +11,7 @@ import { EventEmitter } from '@angular/core';
 export class AddUserComponent implements OnInit {
 
   @Output()
-  createdUserEvent: EventEmitter<any> = new EventEmitter<any>();
+  createdUserEvent: EventEmitter<User> = new EventEmitter<User>();
   addUserForm: FormGroup;
   username: FormControl;
   email: FormControl;
@@ -20,7 +19,7 @@ export class AddUserComponent implements OnInit {
   confirmPassword: FormControl;
   passwordHidden: boolean = true;
   
-  constructor(private authentification: AuthentificationService) { }
+  constructor() { }
 
   ngOnInit() {
     
@@ -33,24 +32,27 @@ export class AddUserComponent implements OnInit {
       Validators.required,
       Validators.pattern(new RegExp(/^(?=.*[0-9])(?=.*[!@#\$%\^&\*-])(?=.{8,})/))
     ]);
-    this.confirmPassword = new FormControl('');
+    this.confirmPassword = new FormControl('', [
+      Validators.required,
+      (control: FormControl) => confirmPasswordValidator(this.password, control)
+    ]);
     this.addUserForm = new FormGroup({
       username: this.username,
       email: this.email,
       password: this.password,
       confirmPassword: this.confirmPassword
     });
-  } 
+  }
 
   submitUser() {
-    console.log(this.addUserForm.value);
-    this.authentification.addUser(this.addUserForm.value).subscribe((user: User) => {
-      console.log('User crée', user);
-      this.createdUserEvent.emit({username: this.username.value, password: this.password.value});
-    });
-  }
+    this.createdUserEvent.emit(this.addUserForm.value);
+}
 
   changeVisibiltyPassword() {
     this.passwordHidden = !this.passwordHidden;
   }
+}
+
+function confirmPasswordValidator(password: FormControl, confirmPassword: FormControl) {
+  return password.value === confirmPassword.value ? null : { mismatch: {err: 'Passwords doesn\'t match'}};
 }

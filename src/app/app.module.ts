@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { FormModule } from './modules-shared/form.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomePageComponent,
     HeaderComponent,
     FooterComponent,
+    ChatComponent,
 
   ],
   imports: [
