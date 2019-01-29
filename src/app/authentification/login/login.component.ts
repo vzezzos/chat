@@ -16,9 +16,9 @@ export class LoginComponent implements OnInit {
   set userToLog(user: User) {
     this._userToLog = user;
     console.log('DANS LE SETTER', user);
-    if (this.username && this.mdp) {
+    if (this.username && this.password) {
       this.username.setValue(this._userToLog.username);
-      this.mdp.setValue(this._userToLog.password);
+      this.password.setValue(this._userToLog.password);
     }
   }
   get userToLog(): User {
@@ -26,10 +26,11 @@ export class LoginComponent implements OnInit {
   }
 
   username: FormControl;
-  mdp: FormControl;
+  password: FormControl;
   loginForm: FormGroup;
   flagUser: boolean;
   flagCo: boolean;
+  passwordHidden: boolean = true;
 
   constructor(private authentification: AuthentificationService, private router: Router) { }
 
@@ -38,16 +39,19 @@ export class LoginComponent implements OnInit {
       Validators.required,
       Validators.minLength(4),
     ]);
-    this.mdp = new FormControl('', [
+    this.password = new FormControl('', [
       Validators.required,
       Validators.minLength(8),
     ]);
     this.loginForm = new FormGroup({
       username: this.username,
-      mdp: this.mdp,
+      password: this.password,
     });
     this.flagUser = false;
     this.flagCo = false;
   }
 
+  changeVisibiltyPassword() {
+    this.passwordHidden = !this.passwordHidden;
+  }
 }

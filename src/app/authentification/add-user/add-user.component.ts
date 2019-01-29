@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthentificationService } from 'src/app/providers/authentification.service';
 import { User } from 'src/app/models/user';
 import { EventEmitter } from '@angular/core';
@@ -18,14 +18,21 @@ export class AddUserComponent implements OnInit {
   email: FormControl;
   password: FormControl;
   confirmPassword: FormControl;
+  passwordHidden: boolean = true;
   
   constructor(private authentification: AuthentificationService) { }
 
   ngOnInit() {
     
-    this.username = new FormControl('');
+    this.username = new FormControl('', [
+      Validators.required,
+      Validators.minLength(4),
+    ]);
     this.email = new FormControl('');
-    this.password = new FormControl('');
+    this.password = new FormControl('', [
+      Validators.required,
+      Validators.pattern(new RegExp(/^(?=.*[0-9])(?=.*[!@#\$%\^&\*-])(?=.{8,})/))
+    ]);
     this.confirmPassword = new FormControl('');
     this.addUserForm = new FormGroup({
       username: this.username,
@@ -33,7 +40,7 @@ export class AddUserComponent implements OnInit {
       password: this.password,
       confirmPassword: this.confirmPassword
     });
-  }
+  } 
 
   submitUser() {
     console.log(this.addUserForm.value);
@@ -43,4 +50,7 @@ export class AddUserComponent implements OnInit {
     });
   }
 
+  changeVisibiltyPassword() {
+    this.passwordHidden = !this.passwordHidden;
+  }
 }

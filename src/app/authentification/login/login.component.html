@@ -12,7 +12,8 @@
               </mat-form-field>
 
               <mat-form-field class="input-user">
-                <input type="password" matInput placeholder="Password" [formControl]="mdp" />
+                <input type="{{passwordHidden ? 'password' : 'text'}}" matInput placeholder="Password" [formControl]="password" />
+                <mat-icon matSuffix (click)="changeVisibiltyPassword()">{{passwordHidden ? 'visibility' : 'visibility_off'}}</mat-icon>
               </mat-form-field>
 
               <mat-checkbox color="primary" class="checkbox">
