@@ -1,5 +1,5 @@
-<div class="container">
-  <mat-tab-group dynamicHeight mat-stretch-tabs (selectedIndexChange)="selectIndex($event)" [selectedIndex]="selectTab" class="tab">
+<div class="container page">
+  <mat-tab-group dynamicHeight mat-stretch-tabs (selectedIndexChange)="selectIndex($event)" [selectedIndex]="selectTab" class="tab" color="accent">
     <mat-tab label="Signin"> <app-login [userToLog]="userToLog" (signInEvent)="signIn($event)"></app-login> </mat-tab>
     <mat-tab label="Create an account"> <app-add-user (createdUserEvent)="createdUser($event)"></app-add-user> </mat-tab>
   </mat-tab-group>

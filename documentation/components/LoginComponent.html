@@ -168,6 +168,9 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
+                            <li>
+                                <a href="#signIn">signIn</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -187,6 +190,20 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#signInEvent">signInEvent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -214,57 +231,15 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(authentification: <a href="../injectables/AuthentificationService.html">AuthentificationService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+<code>constructor()</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/authentification/login/login.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/authentification/login/login.component.ts:34</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>authentification</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../injectables/AuthentificationService.html" target="_self" >AuthentificationService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>router</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
             </tbody>
         </table>
 </section>
@@ -283,13 +258,34 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/authentification/login/login.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/authentification/login/login.component.ts:14</a></div>
                             </td>
                         </tr>
             </tbody>
         </table>
 </section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="signInEvent"></a>
+                        <code>signInEvent</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="../classes/User.html" target="_self" >EventEmitter&lt;User&gt;</a></code>
 
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/authentification/login/login.component.ts:27</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
     <section>
@@ -319,7 +315,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/authentification/login/login.component.ts:54</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/authentification/login/login.component.ts:55</a></div>
                             </td>
                         </tr>
 
@@ -357,7 +353,45 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/authentification/login/login.component.ts:37</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/authentification/login/login.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="signIn"></a>
+                        <span class="name">
+                            <b>
+                            signIn
+                            </b>
+                            <a href="#signIn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>signIn()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/authentification/login/login.component.ts:59</a></div>
                             </td>
                         </tr>
 
@@ -407,7 +441,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/authentification/login/login.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/authentification/login/login.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -441,7 +475,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/authentification/login/login.component.ts:32</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/authentification/login/login.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -475,7 +509,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/authentification/login/login.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/authentification/login/login.component.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -509,7 +543,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/authentification/login/login.component.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/authentification/login/login.component.ts:31</a></div>
                             </td>
                         </tr>
 
@@ -543,7 +577,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/authentification/login/login.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/authentification/login/login.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -582,7 +616,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/authentification/login/login.component.ts:33</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/authentification/login/login.component.ts:34</a></div>
                             </td>
                         </tr>
 
@@ -616,7 +650,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/authentification/login/login.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/authentification/login/login.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -645,7 +679,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/authentification/login/login.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/authentification/login/login.component.ts:22</a></div>
                                 </td>
                             </tr>
 
@@ -656,7 +690,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/authentification/login/login.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/authentification/login/login.component.ts:14</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -699,10 +733,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
-import { AuthentificationService } from &#x27;../../providers/authentification.service&#x27;;
-import { Router } from &#x27;@angular/router&#x27;;
 import { User } from &#x27;src/app/models/user&#x27;;
 
 @Component({
@@ -726,6 +758,9 @@ export class LoginComponent implements OnInit {
     return this._userToLog;
   }
 
+  @Output()
+  signInEvent: EventEmitter&lt;User&gt; &#x3D; new EventEmitter&lt;User&gt;();
+
   username: FormControl;
   password: FormControl;
   loginForm: FormGroup;
@@ -733,7 +768,7 @@ export class LoginComponent implements OnInit {
   flagCo: boolean;
   passwordHidden: boolean &#x3D; true;
 
-  constructor(private authentification: AuthentificationService, private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
     this.username &#x3D; new FormControl(&#x27;&#x27;, [
@@ -754,6 +789,10 @@ export class LoginComponent implements OnInit {
 
   changeVisibiltyPassword() {
     this.passwordHidden &#x3D; !this.passwordHidden;
+  }
+
+  signIn() {
+    this.signInEvent.emit({username: this.username.value, password: this.password.value});
   }
 }</code></pre>
     </div>
@@ -780,7 +819,7 @@ export class LoginComponent implements OnInit {
               &lt;mat-checkbox color&#x3D;&quot;primary&quot; class&#x3D;&quot;checkbox&quot;&gt;
                 Remember me?
               &lt;/mat-checkbox&gt;
-              &lt;button mat-raised-button class&#x3D;&quot;button&quot; (click)&#x3D;&quot;checkIfCorrect()&quot; [disabled]&#x3D;&quot;loginForm.invalid&quot;&gt; 
+              &lt;button mat-raised-button class&#x3D;&quot;button&quot; (click)&#x3D; &quot;signIn()&quot; [disabled]&#x3D;&quot;loginForm.invalid&quot;&gt; 
                 Connection
               &lt;/button&gt;
               &lt;mat-hint&gt;Forgotten password?&lt;/mat-hint&gt;
@@ -866,8 +905,8 @@ mat-card {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">    <div class="body">      <mat-card>        <form [formGroup]="loginForm">          <div class="form-user">                        <mat-form-field class="input-user">              <input type="text" matInput placeholder="Username" [formControl]="username" />                <mat-error *ngIf="username.invalid">8 caractères requis</mat-error>              </mat-form-field>              <mat-form-field class="input-user">                <input type="{{passwordHidden ? \'password\' : \'text\'}}" matInput placeholder="Password" [formControl]="password" />                <mat-icon matSuffix (click)="changeVisibiltyPassword()">{{passwordHidden ? \'visibility\' : \'visibility_off\'}}</mat-icon>              </mat-form-field>              <mat-checkbox color="primary" class="checkbox">                Remember me?              </mat-checkbox>              <button mat-raised-button class="button" (click)="checkIfCorrect()" [disabled]="loginForm.invalid">                 Connection              </button>              <mat-hint>Forgotten password?</mat-hint>            </div>            <div>              <p *ngIf="flagCo"> Username ou mot de passe incorrect </p>            </div>          </form>        </mat-card>    </div>    <!--button ><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48ZyBpZD0ic3VyZmFjZTEiPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZDMTA3OyIgZD0iTSA0My42MDkzNzUgMjAuMDgyMDMxIEwgNDIgMjAuMDgyMDMxIEwgNDIgMjAgTCAyNCAyMCBMIDI0IDI4IEwgMzUuMzA0Njg4IDI4IEMgMzMuNjUyMzQ0IDMyLjY1NjI1IDI5LjIyMjY1NiAzNiAyNCAzNiBDIDE3LjM3MTA5NCAzNiAxMiAzMC42Mjg5MDYgMTIgMjQgQyAxMiAxNy4zNzEwOTQgMTcuMzcxMDk0IDEyIDI0IDEyIEMgMjcuMDU4NTk0IDEyIDI5Ljg0Mzc1IDEzLjE1MjM0NCAzMS45NjA5MzggMTUuMDM5MDYzIEwgMzcuNjE3MTg4IDkuMzgyODEzIEMgMzQuMDQ2ODc1IDYuMDU0Njg4IDI5LjI2OTUzMSA0IDI0IDQgQyAxMi45NTMxMjUgNCA0IDEyLjk1MzEyNSA0IDI0IEMgNCAzNS4wNDY4NzUgMTIuOTUzMTI1IDQ0IDI0IDQ0IEMgMzUuMDQ2ODc1IDQ0IDQ0IDM1LjA0Njg3NSA0NCAyNCBDIDQ0IDIyLjY2MDE1NiA0My44NjMyODEgMjEuMzUxNTYzIDQzLjYwOTM3NSAyMC4wODIwMzEgWiAiPjwvcGF0aD48cGF0aCBzdHlsZT0iIGZpbGw6I0ZGM0QwMDsiIGQ9Ik0gNi4zMDQ2ODggMTQuNjkxNDA2IEwgMTIuODc4OTA2IDE5LjUxMTcxOSBDIDE0LjY1NjI1IDE1LjEwOTM3NSAxOC45NjA5MzggMTIgMjQgMTIgQyAyNy4wNTg1OTQgMTIgMjkuODQzNzUgMTMuMTUyMzQ0IDMxLjk2MDkzOCAxNS4wMzkwNjMgTCAzNy42MTcxODggOS4zODI4MTMgQyAzNC4wNDY4NzUgNi4wNTQ2ODggMjkuMjY5NTMxIDQgMjQgNCBDIDE2LjMxNjQwNiA0IDkuNjU2MjUgOC4zMzU5MzggNi4zMDQ2ODggMTQuNjkxNDA2IFogIj48L3BhdGg+PHBhdGggc3R5bGU9IiBmaWxsOiM0Q0FGNTA7IiBkPSJNIDI0IDQ0IEMgMjkuMTY0MDYzIDQ0IDMzLjg1OTM3NSA0Mi4wMjM0MzggMzcuNDEwMTU2IDM4LjgwODU5NCBMIDMxLjIxODc1IDMzLjU3MDMxMyBDIDI5LjIxMDkzOCAzNS4wODk4NDQgMjYuNzE0ODQ0IDM2IDI0IDM2IEMgMTguNzk2ODc1IDM2IDE0LjM4MjgxMyAzMi42ODM1OTQgMTIuNzE4NzUgMjguMDU0Njg4IEwgNi4xOTUzMTMgMzMuMDc4MTI1IEMgOS41MDM5MDYgMzkuNTU0Njg4IDE2LjIyNjU2MyA0NCAyNCA0NCBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojMTk3NkQyOyIgZD0iTSA0My42MDkzNzUgMjAuMDgyMDMxIEwgNDIgMjAuMDgyMDMxIEwgNDIgMjAgTCAyNCAyMCBMIDI0IDI4IEwgMzUuMzA0Njg4IDI4IEMgMzQuNTExNzE5IDMwLjIzODI4MSAzMy4wNzAzMTMgMzIuMTY0MDYzIDMxLjIxNDg0NCAzMy41NzAzMTMgQyAzMS4yMTg3NSAzMy41NzAzMTMgMzEuMjE4NzUgMzMuNTcwMzEzIDMxLjIxODc1IDMzLjU3MDMxMyBMIDM3LjQxMDE1NiAzOC44MDg1OTQgQyAzNi45NzI2NTYgMzkuMjAzMTI1IDQ0IDM0IDQ0IDI0IEMgNDQgMjIuNjYwMTU2IDQzLjg2MzI4MSAyMS4zNTE1NjMgNDMuNjA5Mzc1IDIwLjA4MjAzMSBaICI+PC9wYXRoPjwvZz48L3N2Zz4="></button--></div></div>'
-    var COMPONENTS = [{'name': 'AddUserComponent', 'selector': 'app-add-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthentificationComponent', 'selector': 'app-authentification'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'LoginComponent', 'selector': 'app-login'}];
+        var COMPONENT_TEMPLATE = '<div><div class="container">    <div class="body">      <mat-card>        <form [formGroup]="loginForm">          <div class="form-user">                        <mat-form-field class="input-user">              <input type="text" matInput placeholder="Username" [formControl]="username" />                <mat-error *ngIf="username.invalid">8 caractères requis</mat-error>              </mat-form-field>              <mat-form-field class="input-user">                <input type="{{passwordHidden ? \'password\' : \'text\'}}" matInput placeholder="Password" [formControl]="password" />                <mat-icon matSuffix (click)="changeVisibiltyPassword()">{{passwordHidden ? \'visibility\' : \'visibility_off\'}}</mat-icon>              </mat-form-field>              <mat-checkbox color="primary" class="checkbox">                Remember me?              </mat-checkbox>              <button mat-raised-button class="button" (click)= "signIn()" [disabled]="loginForm.invalid">                 Connection              </button>              <mat-hint>Forgotten password?</mat-hint>            </div>            <div>              <p *ngIf="flagCo"> Username ou mot de passe incorrect </p>            </div>          </form>        </mat-card>    </div>    <!--button ><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48ZyBpZD0ic3VyZmFjZTEiPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZDMTA3OyIgZD0iTSA0My42MDkzNzUgMjAuMDgyMDMxIEwgNDIgMjAuMDgyMDMxIEwgNDIgMjAgTCAyNCAyMCBMIDI0IDI4IEwgMzUuMzA0Njg4IDI4IEMgMzMuNjUyMzQ0IDMyLjY1NjI1IDI5LjIyMjY1NiAzNiAyNCAzNiBDIDE3LjM3MTA5NCAzNiAxMiAzMC42Mjg5MDYgMTIgMjQgQyAxMiAxNy4zNzEwOTQgMTcuMzcxMDk0IDEyIDI0IDEyIEMgMjcuMDU4NTk0IDEyIDI5Ljg0Mzc1IDEzLjE1MjM0NCAzMS45NjA5MzggMTUuMDM5MDYzIEwgMzcuNjE3MTg4IDkuMzgyODEzIEMgMzQuMDQ2ODc1IDYuMDU0Njg4IDI5LjI2OTUzMSA0IDI0IDQgQyAxMi45NTMxMjUgNCA0IDEyLjk1MzEyNSA0IDI0IEMgNCAzNS4wNDY4NzUgMTIuOTUzMTI1IDQ0IDI0IDQ0IEMgMzUuMDQ2ODc1IDQ0IDQ0IDM1LjA0Njg3NSA0NCAyNCBDIDQ0IDIyLjY2MDE1NiA0My44NjMyODEgMjEuMzUxNTYzIDQzLjYwOTM3NSAyMC4wODIwMzEgWiAiPjwvcGF0aD48cGF0aCBzdHlsZT0iIGZpbGw6I0ZGM0QwMDsiIGQ9Ik0gNi4zMDQ2ODggMTQuNjkxNDA2IEwgMTIuODc4OTA2IDE5LjUxMTcxOSBDIDE0LjY1NjI1IDE1LjEwOTM3NSAxOC45NjA5MzggMTIgMjQgMTIgQyAyNy4wNTg1OTQgMTIgMjkuODQzNzUgMTMuMTUyMzQ0IDMxLjk2MDkzOCAxNS4wMzkwNjMgTCAzNy42MTcxODggOS4zODI4MTMgQyAzNC4wNDY4NzUgNi4wNTQ2ODggMjkuMjY5NTMxIDQgMjQgNCBDIDE2LjMxNjQwNiA0IDkuNjU2MjUgOC4zMzU5MzggNi4zMDQ2ODggMTQuNjkxNDA2IFogIj48L3BhdGg+PHBhdGggc3R5bGU9IiBmaWxsOiM0Q0FGNTA7IiBkPSJNIDI0IDQ0IEMgMjkuMTY0MDYzIDQ0IDMzLjg1OTM3NSA0Mi4wMjM0MzggMzcuNDEwMTU2IDM4LjgwODU5NCBMIDMxLjIxODc1IDMzLjU3MDMxMyBDIDI5LjIxMDkzOCAzNS4wODk4NDQgMjYuNzE0ODQ0IDM2IDI0IDM2IEMgMTguNzk2ODc1IDM2IDE0LjM4MjgxMyAzMi42ODM1OTQgMTIuNzE4NzUgMjguMDU0Njg4IEwgNi4xOTUzMTMgMzMuMDc4MTI1IEMgOS41MDM5MDYgMzkuNTU0Njg4IDE2LjIyNjU2MyA0NCAyNCA0NCBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojMTk3NkQyOyIgZD0iTSA0My42MDkzNzUgMjAuMDgyMDMxIEwgNDIgMjAuMDgyMDMxIEwgNDIgMjAgTCAyNCAyMCBMIDI0IDI4IEwgMzUuMzA0Njg4IDI4IEMgMzQuNTExNzE5IDMwLjIzODI4MSAzMy4wNzAzMTMgMzIuMTY0MDYzIDMxLjIxNDg0NCAzMy41NzAzMTMgQyAzMS4yMTg3NSAzMy41NzAzMTMgMzEuMjE4NzUgMzMuNTcwMzEzIDMxLjIxODc1IDMzLjU3MDMxMyBMIDM3LjQxMDE1NiAzOC44MDg1OTQgQyAzNi45NzI2NTYgMzkuMjAzMTI1IDQ0IDM0IDQ0IDI0IEMgNDQgMjIuNjYwMTU2IDQzLjg2MzI4MSAyMS4zNTE1NjMgNDMuNjA5Mzc1IDIwLjA4MjAzMSBaICI+PC9wYXRoPjwvZz48L3N2Zz4="></button--></div></div>'
+    var COMPONENTS = [{'name': 'AddUserComponent', 'selector': 'app-add-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthentificationComponent', 'selector': 'app-authentification'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'ContentComponent', 'selector': 'app-content'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

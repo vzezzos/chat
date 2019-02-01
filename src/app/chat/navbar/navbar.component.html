@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="sub-titles mat-elevation-z4">
+    <span>Contacts</span>
+    <mat-icon matSuffix matTooltip="{{!iconFlagContact ? 'Show contacts': 'Hide contacts'}}" 
+      [matTooltipShowDelay]="1000"
+      class="icon" 
+      (click)="showOrHideContacts()">
+      {{!iconFlagContact ? "add" : "remove"}}
+    </mat-icon>
+  </div>
+  <div *ngIf="users && iconFlagContact" class="fake-users-container">
+    <div class="fake-users" *ngFor="let user of users" (click)="selectUser(user)">
+      <mat-icon class="icon">arrow_right</mat-icon>
+      <span>{{user?.username}}</span>
+    </div>
+  </div>
+  <div class="sub-titles mat-elevation-z4">
+    <span>Settings</span>
+    <mat-icon matSuffix class="icon" (click)="showOrHideSettings()">{{!iconFlagSettings ? "add" : "remove"}}</mat-icon>
+  </div>
+  <div class="sub-titles mat-elevation-z4">
+    <span>Deconnexion</span>
+    <mat-icon matSuffix class="icon">power_settings_new</mat-icon>
+  </div>
+</div>

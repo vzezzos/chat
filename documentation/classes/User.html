@@ -81,14 +81,17 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#admin">admin</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#id">id</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#password">password</a>
                             </li>
                             <li>
@@ -114,7 +117,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, admin: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>constructor(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, admin?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, id?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -156,7 +159,7 @@
                                                         </td>
                                                   
                                                     <td>
-                                                            No
+                                                            Yes
                                                     </td>
                                                     
                                                 </tr>
@@ -168,7 +171,7 @@
                                                         </td>
                                                   
                                                     <td>
-                                                            No
+                                                            Yes
                                                     </td>
                                                     
                                                 </tr>
@@ -180,7 +183,7 @@
                                                         </td>
                                                   
                                                     <td>
-                                                            No
+                                                            Yes
                                                     </td>
                                                     
                                                 </tr>
@@ -206,6 +209,7 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Optional</span>
                             admin
                             </b>
                             <a href="#admin"><span class="icon ion-ios-link"></span></a>
@@ -241,6 +245,7 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Optional</span>
                             id
                             </b>
                             <a href="#id"><span class="icon ion-ios-link"></span></a>
@@ -276,6 +281,7 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Optional</span>
                             password
                             </b>
                             <a href="#password"><span class="icon ion-ios-link"></span></a>
@@ -354,10 +360,9 @@
 
     constructor(
         public username: string,
-        public admin: boolean,
-        public id: string,
-        public password: string
-
+        public admin?: boolean,
+        public id?: string,
+        public password?: string
     ) {
     }
 

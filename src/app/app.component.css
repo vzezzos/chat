@@ -1,19 +1,28 @@
 .container {
-    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 135vh;
+    overflow:  hidden hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
 }
 
 .header {
-    height: 64px;
+    z-index: 10;
     width: 100%;
 }
 
 .body {
+    z-index: 5;
     width: 100%;
+    flex: 1;
+    position: relative;
 }
 
 .footer {
     width: 100%;
+    min-height: 35vh;
+    position: relative;
 }

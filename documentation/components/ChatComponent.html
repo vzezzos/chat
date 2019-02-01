@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>FooterComponent</li>
+  <li>ChatComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/footer/footer.component.ts</code>
+    <code>src/app/chat/chat.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-footer</code></td>
+                <td class="col-md-9"><code>app-chat</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./footer.component.css</code></td>
+                <td class="col-md-9"><code>./chat.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./footer.component.html</code></td>
+                <td class="col-md-9"><code>./chat.component.html</code></td>
             </tr>
 
 
@@ -130,16 +130,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#fakeLinksAbout">fakeLinksAbout</a>
+                                <a href="#selectedUserToSend">selectedUserToSend</a>
                             </li>
                             <li>
-                                <a href="#fakeLinksChat">fakeLinksChat</a>
+                                <a href="#username">username</a>
                             </li>
                             <li>
-                                <a href="#fakeLinksHelp">fakeLinksHelp</a>
-                            </li>
-                            <li>
-                                <a href="#newsLetterForm">newsLetterForm</a>
+                                <a href="#users">users</a>
                             </li>
                         </ul>
                     </td>
@@ -155,6 +152,9 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#selectedUser">selectedUser</a>
                             </li>
                         </ul>
                     </td>
@@ -174,15 +174,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(authentification: <a href="../injectables/AuthentificationService.html">AuthentificationService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/footer/footer.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/chat/chat.component.ts:14</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>authentification</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/AuthentificationService.html" target="_self" >AuthentificationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -218,7 +248,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/footer/footer.component.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/chat/chat.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -234,6 +264,75 @@
                 </tr>
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedUser"></a>
+                        <span class="name">
+                            <b>
+                            selectedUser
+                            </b>
+                            <a href="#selectedUser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>selectedUser(user: <a href="../classes/User.html">User</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/chat/chat.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>user</td>
+                                                        <td>
+                                                                    <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 </section>
 
     <section>
@@ -245,35 +344,30 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="fakeLinksAbout"></a>
+                        <a name="selectedUserToSend"></a>
                         <span class="name">
                             <b>
-                            fakeLinksAbout
+                            selectedUserToSend
                             </b>
-                            <a href="#fakeLinksAbout"><span class="icon ion-ios-link"></span></a>
+                            <a href="#selectedUserToSend"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>fakeLinksAbout:     <code>string[]</code>
+                        <code>selectedUserToSend:     <code><a href="../classes/User.html" target="_self" >User</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>string[]</code>
+                            <i>Type : </i>    <code><a href="../classes/User.html" target="_self" >User</a></code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/footer/footer.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/chat/chat.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -284,35 +378,30 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="fakeLinksChat"></a>
+                        <a name="username"></a>
                         <span class="name">
                             <b>
-                            fakeLinksChat
+                            username
                             </b>
-                            <a href="#fakeLinksChat"><span class="icon ion-ios-link"></span></a>
+                            <a href="#username"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>fakeLinksChat:     <code>string[]</code>
+                        <code>username:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>string[]</code>
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/footer/footer.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/chat/chat.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -323,24 +412,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="fakeLinksHelp"></a>
+                        <a name="users"></a>
                         <span class="name">
                             <b>
-                            fakeLinksHelp
+                            users
                             </b>
-                            <a href="#fakeLinksHelp"><span class="icon ion-ios-link"></span></a>
+                            <a href="#users"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>fakeLinksHelp:     <code>string[]</code>
+                        <code>users:     <code><a href="../classes/User.html" target="_self" >User[]</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>string[]</code>
+                            <i>Type : </i>    <code><a href="../classes/User.html" target="_self" >User[]</a></code>
 
                         </td>
                     </tr>
@@ -351,41 +440,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/footer/footer.component.ts:13</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="newsLetterForm"></a>
-                        <span class="name">
-                            <b>
-                            newsLetterForm
-                            </b>
-                            <a href="#newsLetterForm"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>newsLetterForm:     <code><a href="https://angular.io/api/forms/FormControl" target="_blank" >FormControl</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://angular.io/api/forms/FormControl" target="_blank" >FormControl</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/footer/footer.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/chat/chat.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -399,164 +454,81 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { FormControl } from &#x27;@angular/forms&#x27;;
+import { User } from &#x27;../models/user&#x27;;
+import { AuthentificationService } from &#x27;../providers/authentification.service&#x27;;
 
 @Component({
-  selector: &#x27;app-footer&#x27;,
-  templateUrl: &#x27;./footer.component.html&#x27;,
-  styleUrls: [&#x27;./footer.component.css&#x27;]
+  selector: &#x27;app-chat&#x27;,
+  templateUrl: &#x27;./chat.component.html&#x27;,
+  styleUrls: [&#x27;./chat.component.css&#x27;]
 })
-export class FooterComponent implements OnInit {
+export class ChatComponent implements OnInit {
 
-  fakeLinksAbout: string[]&#x3D; [];
-  fakeLinksChat: string[]&#x3D; [];
-  fakeLinksHelp: string[]&#x3D; [];
-  newsLetterForm: FormControl;
+  users: User[] &#x3D; [];
+  username: string;
+  selectedUserToSend: User;
 
-  constructor() { 
-    this.fakeLinksAbout &#x3D; [
-      &#x27;Generals rules&#x27;,
-      &#x27;Terms of use&#x27;,
-      &#x27;Personnal data&#x27;,
-      &#x27;Legal notice&#x27;,
-      &#x27;Report abuse&#x27;,
-      &#x27;Cookies&#x27;
-    ];
-    this.fakeLinksChat &#x3D; [
-      &#x27;Who are we?&#x27;,
-      &#x27;Recrutement&#x27;,
-      &#x27;Contact us&#x27;
-    ];
-    this.fakeLinksHelp &#x3D; [
-      &#x27;Settings&#x27;,
-      &#x27;Need Help?&#x27;,
-      &#x27;Plus d\&#x27;idées&#x27;
-    ];
-    this.newsLetterForm &#x3D; new FormControl(&#x27;&#x27;);
-  }
+  constructor(private authentification: AuthentificationService) {
+   }
 
   ngOnInit() {
+    this.authentification.getAllUsers().subscribe((users: User[]) &#x3D;&gt; {
+      this.users &#x3D; users;
+      this.username &#x3D; this.authentification.user ? this.authentification.user.username : &#x27;test&#x27;;
+    }, (err: Error) &#x3D;&gt; {
+      console.log(err);
+    });
   }
 
+  selectedUser(user: User) {
+    console.log(user);
+    this.selectedUserToSend &#x3D; user;
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">
-&lt;div class&#x3D;&quot;container&quot;&gt;
+&lt;div class&#x3D;&quot;container page&quot;&gt;
 
-  &lt;div class&#x3D;&quot;text&quot;&gt;
-    &lt;div class&#x3D;&quot;separateur&quot;&gt;&lt;/div&gt;
-    &lt;div class&#x3D;&quot;news-letter&quot;&gt;
-      &lt;span class&#x3D;&quot;title&quot;&gt;&lt;b&gt;Sign Up For Our Newsletter&lt;/b&gt;&lt;/span&gt;
-      &lt;form&gt;
-        &lt;input type&#x3D;&quot;email&quot; placeholder&#x3D;&quot;Enter your email&quot; [formControl]&#x3D;&quot;newsLetterForm&quot; class&#x3D;&quot;form&quot;/&gt;
-        &lt;button mat-raised-button class&#x3D;&quot;button&quot;&gt;Go&lt;/button&gt;
-      &lt;/form&gt;
-      &lt;span&gt;Nulla vestibulum nibh vel sem faucibus finibus. Vestibulum magna massa, egestas nec tincidunt ut, congue tristique nibh. Suspendisse tellus libero, euismod sit amet tellus quis, gravida suscipit quam.&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;separateur&quot;&gt;&lt;/div&gt; 
+  &lt;div class&#x3D;&quot;navbar&quot;&gt;
+    &lt;app-navbar (selectedUserEvent)&#x3D;&quot;selectedUser($event)&quot; [users]&#x3D;&quot;users&quot;&gt;&lt;/app-navbar&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;line-between&quot;&gt;&lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;text&quot;&gt;
-    &lt;div class&#x3D;&quot;separateur&quot;&gt;&lt;/div&gt;
-    &lt;div class&#x3D;&quot;fake-text&quot;&gt;
-      &lt;span class&#x3D;&quot;subtitle&quot;&gt;&lt;b&gt;About&lt;/b&gt;&lt;/span&gt;
-      &lt;div class&#x3D;&quot;block&quot; *ngFor&#x3D;&quot;let fakeLinkAbout of fakeLinksAbout&quot;&gt;
-        &lt;span class&#x3D;&quot;lst-item&quot;&gt;{{fakeLinkAbout}}&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class&#x3D;&quot;fake-text&quot;&gt;
-      &lt;span class&#x3D;&quot;subtitle&quot;&gt;&lt;b&gt;Chat&lt;/b&gt;&lt;/span&gt;
-      &lt;div class&#x3D;&quot;block&quot; *ngFor&#x3D;&quot;let fakeLinkChat of fakeLinksChat&quot;&gt;
-        &lt;span class&#x3D;&quot;lst-item&quot;&gt;{{fakeLinkChat}}&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class&#x3D;&quot;fake-text&quot;&gt;
-      &lt;span class&#x3D;&quot;subtitle&quot;&gt;&lt;b&gt;Help&lt;/b&gt;&lt;/span&gt;
-      &lt;div class&#x3D;&quot;block&quot; *ngFor&#x3D;&quot;let fakeLinkHelp of fakeLinksHelp&quot;&gt;
-        &lt;span class&#x3D;&quot;lst-item&quot;&gt;{{fakeLinkHelp}}&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;separateur&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;content&quot;&gt;
+    &lt;app-content [username]&#x3D;&quot;username&quot; [selectedUser]&#x3D;&quot;selectedUserToSend&quot;&gt;&lt;/app-content&gt;
   &lt;/div&gt;
-  
-&lt;/div&gt;
-</code></pre>
+
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./footer.component.css</code>
+                    <code>./chat.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+                <pre class="line-numbers"><code class="language-scss">
+.container {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-    background-color: #0a0a0a;
+    /*font-family: arial;*/
 }
 
-.news-letter {
-    flex: 5;
+.navbar {
+    width: 20vw;
+    min-width: 150px;
+    background-color: #00695c;
+
+}
+
+.content {
+    width: 100%;
+    /*background-color: #F5F5F6;*/
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
 }
-
-.news-letter &gt; * {
-    padding-bottom: 1em;
-}
-
-.text {
-    flex: 5;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.fake-text {
-    flex: 2;
-    margin-left: 2em;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.subtitle {
-    margin-bottom: 1em;
-}
-
-.separateur {
-    flex: 1;
-}
-
-.line-between {
-    width: 1px;
-    min-height: 80%;
-    background-color: grey;
-}
-
-.form {
-    min-height: 26px;
-}
-.button {
-    background: rgb(182, 2, 2);
-    margin-left: .5em;
-}</code></pre>
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -584,10 +556,10 @@ export class FooterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="text">    <div class="separateur"></div>    <div class="news-letter">      <span class="title"><b>Sign Up For Our Newsletter</b></span>      <form>        <input type="email" placeholder="Enter your email" [formControl]="newsLetterForm" class="form"/>        <button mat-raised-button class="button">Go</button>      </form>      <span>Nulla vestibulum nibh vel sem faucibus finibus. Vestibulum magna massa, egestas nec tincidunt ut, congue tristique nibh. Suspendisse tellus libero, euismod sit amet tellus quis, gravida suscipit quam.</span>    </div>    <div class="separateur"></div>   </div>  <div class="line-between"></div>  <div class="text">    <div class="separateur"></div>    <div class="fake-text">      <span class="subtitle"><b>About</b></span>      <div class="block" *ngFor="let fakeLinkAbout of fakeLinksAbout">        <span class="lst-item">{{fakeLinkAbout}}</span>      </div>    </div>    <div class="fake-text">      <span class="subtitle"><b>Chat</b></span>      <div class="block" *ngFor="let fakeLinkChat of fakeLinksChat">        <span class="lst-item">{{fakeLinkChat}}</span>      </div>    </div>    <div class="fake-text">      <span class="subtitle"><b>Help</b></span>      <div class="block" *ngFor="let fakeLinkHelp of fakeLinksHelp">        <span class="lst-item">{{fakeLinkHelp}}</span>      </div>    </div>    <div class="separateur"></div>  </div>  </div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container page">  <div class="navbar">    <app-navbar (selectedUserEvent)="selectedUser($event)" [users]="users"></app-navbar>  </div>  <div class="content">    <app-content [username]="username" [selectedUser]="selectedUserToSend"></app-content>  </div></div></div>'
     var COMPONENTS = [{'name': 'AddUserComponent', 'selector': 'app-add-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthentificationComponent', 'selector': 'app-authentification'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'ContentComponent', 'selector': 'app-content'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
+    var ACTUAL_COMPONENT = {'name': 'ChatComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -621,7 +593,7 @@ export class FooterComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'FooterComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ChatComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

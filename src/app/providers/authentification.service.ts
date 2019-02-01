@@ -16,10 +16,12 @@ export class AuthentificationService {
   flagUser: boolean;
   user: User;
   token: string;
+  path: string;
 
   constructor(private http: HttpClient) {
     this.flagUser = false;
     this.flagAdmin = false;
+    this.path = 'htpp://localhost:3000';
   }
 
   getFlagAdmin(): boolean {
@@ -47,6 +49,18 @@ export class AuthentificationService {
         this.user = result.user;
         this.token = result.token;
         return result;
+      })
+    );
+  }
+
+  getAllUsers() {
+    return this.http.get<any>('http://localhost:3000/users').pipe(
+      map((results: any) => {
+        return results.map((user: any) => {
+          const userLst = {...user, id : user._id};
+          delete userLst._id;
+          return userLst;
+        });
       })
     );
   }

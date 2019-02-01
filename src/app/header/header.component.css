@@ -1,7 +1,6 @@
 mat-toolbar {
-  background: rgb(32, 32, 32) !important;
+  background: #0a0a0a !important;
   color: aliceblue;
-
 }
 
 .example-icon {

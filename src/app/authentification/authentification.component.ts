@@ -35,9 +35,10 @@ export class AuthentificationComponent implements OnInit {
   signIn(user: User) {
     this.authentification.signIn(user).subscribe((result: { user: User, token: string }) => {
       alert('login confirmé');
-      this.router.navigate(['/']);
+      this.router.navigate(['/chat']);
     }, (err: Error) => {
       console.log(err);
     });
   }
+
 }

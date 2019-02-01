@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { FormModule } from './modules-shared/form.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ChatComponent } from './chat/chat.component';
+import { ChatModule } from './chat/chat.module';
 
 
 @NgModule({
@@ -20,7 +20,6 @@ import { ChatComponent } from './chat/chat.component';
     HomePageComponent,
     HeaderComponent,
     FooterComponent,
-    ChatComponent,
 
   ],
   imports: [
@@ -28,6 +27,7 @@ import { ChatComponent } from './chat/chat.component';
     MaterialModule,
     RouterModule.forRoot(appRoutes),
     AuthentificationModule,
+    ChatModule,
     FormModule,
     HttpClientModule
   ],
